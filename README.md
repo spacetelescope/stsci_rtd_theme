@@ -9,12 +9,12 @@ You can apply this theme to your current documents by installing this repository
 
 Either from GIT:
 ```
-git clone https://github.com/sosey/stsci_rtd_theme.git
+git clone https://github.com/spacetelescope/stsci_rtd_theme.git
 python setup.py install
 ```
 Or with PIP (furture release on pypi, but you can always pip install from the repo):
 ```
-pip install -e https://github.com/sosey/stsci_rtd_theme.git
+pip install -e https://github.com/spacetelescope/stsci_rtd_theme.git
 ```
 ## Adding to your Sphinx docs
 If you haven't already created your Sphinx documentation, you can start sphinx with
