@@ -12,9 +12,13 @@ Either from GIT:
 git clone https://github.com/spacetelescope/stsci_rtd_theme.git
 python setup.py install
 ```
-Or with PIP (furture release on pypi, but you can always pip install from the repo):
+Or with PIP:
 ```
+# install directly from the git repository
 pip install -e https://github.com/spacetelescope/stsci_rtd_theme.git
+
+# install from pypi release
+pip install stsci_rtd_theme
 ```
 ## Adding to your Sphinx docs
 If you haven't already created your Sphinx documentation, you can start sphinx with
