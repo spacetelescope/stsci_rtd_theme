@@ -18,7 +18,7 @@ pip install -e https://github.com/spacetelescope/stsci_rtd_theme.git
 ```
 ## Adding to your Sphinx docs
 If you haven't already created your Sphinx documentation, you can start sphinx with
-`sphinx-quickstart` and follow the guided steps. When you are finished, 
+`sphinx-quickstart` and follow the guided steps. When you are finished,
 add these lines to your `conf.py` file:
 ```
 import stsci_rtd_theme
@@ -26,3 +26,18 @@ html_theme = 'stsci_rtd_theme'
 html_theme_path = [stsci_rtd_theme.get_html_theme_path()]
 ```
 ![Example theme render](stsci_rtd_theme_example.png)
+
+## Making this theme work on Readthedocs
+Add the following lines to your conf.py file:
+```
+import sphinx
+from distutils.version import LooseVersion
+
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+if on_rtd:
+    extensions.append('sphinx.ext.mathjax')
+elif LooseVersion(sphinx.__version__) < LooseVersion('1.4'):
+    extensions.append('sphinx.ext.pngmath')
+else:
+    extensions.append('sphinx.ext.imgmath')    
+```

@@ -1,0 +1,12 @@
+include README.rst
+
+include setup.py
+include setup.cfg
+
+recursive-include stsci_rtd_theme *
+recursive-include licenses *
+
+global-exclude *.pyc *.o
+
+prune build
+prune dist
