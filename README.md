@@ -32,11 +32,13 @@ Add the following lines to your documentations conf.py file:
 ```
 import sphinx
 import stsci_rtd_theme
-from distutils.version import LooseVersion
+
 def setup(app):
     app.add_stylesheet("stsci.css")
     
 # the below is not strictly necessary but helps with extensions you may use across versions
+from distutils.version import LooseVersion
+
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd:
     extensions.append('sphinx.ext.mathjax')
