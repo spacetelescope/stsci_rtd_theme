@@ -5528,7 +5528,8 @@ div[class^='highlight'] pre {
 
 .wy-side-nav-search>a:hover,
 .wy-side-nav-search .wy-dropdown>a:hover {
-    background: rgba(255, 255, 255, 0.1)
+    background: rgba(255, 255, 255, 0.1);
+    background-color: #2980B9;
 }
 
 .wy-side-nav-search>a img.logo,
