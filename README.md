@@ -44,6 +44,5 @@ elif LooseVersion(sphinx.__version__) < LooseVersion('1.4'):
     extensions.append('sphinx.ext.pngmath')
 else:
     extensions.append('sphinx.ext.imgmath')    
-
-
 ```
+Finally, when setting up your documentation build on readthedocs, make sure to include a requirements file which installs this theme
