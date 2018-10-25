@@ -18,8 +18,8 @@ setup(
     url='https://github.com/spacetelescope/stsci_rtd_theme/',
     license='BSD',
     entry_points={
-        'sphinx_themes': [
-            'path = stsci_rtd_theme:get_html_theme_path',
+        'sphinx.html_themes': [
+            'stsci_rtd_theme = stsci_rtd_theme',
         ],
     },
     classifiers=[
