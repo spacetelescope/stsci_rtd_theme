@@ -4803,7 +4803,8 @@ article ul li ol li {
 article ol {
     list-style: decimal;
     line-height: 24px;
-    margin-bottom: 24px
+    margin-bottom: 24px;
+    font-size: 16px
 }
 
 .wy-plain-list-decimal li,
