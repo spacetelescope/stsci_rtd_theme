@@ -1,5 +1,6 @@
 version 0.0.3dev
 ----------------
+- updated the table row theme to have same text size as paragraphs (PR #10)
 
 version 0.0.2
 -------------
