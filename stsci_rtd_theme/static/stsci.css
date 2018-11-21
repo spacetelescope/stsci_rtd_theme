@@ -4422,7 +4422,13 @@ input[type="checkbox"][disabled] {
 }
 
 .wy-table td,
-.rst-content table.docutils td,
+.rst-content table.docutils td{
+    font-size: 16px;
+    text-align: middle;
+    overflow: visible;
+    padding: 8px 16px
+}
+
 .rst-content table.field-list td,
 .wy-table th,
 .rst-content table.docutils th,
