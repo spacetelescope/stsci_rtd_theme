@@ -1,4 +1,3 @@
-import os
 from setuptools import setup
 
 setup(
@@ -31,5 +30,5 @@ setup(
         'Topic :: Documentation',
         'Topic :: Software Development :: Documentation',
     ],
-    install_requires=('sphinx>=1.3', ),
+    install_requires=('sphinx>=1.3', 'sphinx-rtd-theme'),
 )

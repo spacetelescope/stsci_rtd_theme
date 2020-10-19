@@ -38,8 +38,8 @@ import sphinx
 import stsci_rtd_theme
 
 def setup(app):
-    app.add_stylesheet("stsci.css")
-    
+    app.add_css_file("stsci.css")
+
 # the below is not strictly necessary but helps with extensions you may use across versions
 from distutils.version import LooseVersion
 
@@ -49,6 +49,6 @@ if on_rtd:
 elif LooseVersion(sphinx.__version__) < LooseVersion('1.4'):
     extensions.append('sphinx.ext.pngmath')
 else:
-    extensions.append('sphinx.ext.imgmath')    
+    extensions.append('sphinx.ext.imgmath')
 ```
 Finally, when setting up your documentation build on readthedocs, make sure to include a requirements file which installs this theme. The `sphinx_rtd_theme` that it inherits from should already be there.
