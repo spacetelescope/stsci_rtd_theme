@@ -41,12 +41,12 @@ def setup(app):
     app.add_css_file("stsci.css")
 
 # the below is not strictly necessary but helps with extensions you may use across versions
-from distutils.version import LooseVersion
+from packaging.version import Version
 
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd:
     extensions.append('sphinx.ext.mathjax')
-elif LooseVersion(sphinx.__version__) < LooseVersion('1.4'):
+elif Version(sphinx.__version__) < Version('1.4'):
     extensions.append('sphinx.ext.pngmath')
 else:
     extensions.append('sphinx.ext.imgmath')
