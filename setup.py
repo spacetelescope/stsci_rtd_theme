@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='stsci_rtd_theme',
-    version='0.0.3dev',
+    version='1.0.0',
     author='STScI',
     author_email='help@stsci.edu',
     description='STScI Branded Sphinx theme',
