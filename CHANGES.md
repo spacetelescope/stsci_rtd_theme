@@ -1,6 +1,7 @@
-version 0.0.3dev
+version 0.0.3
 ----------------
 - updated the table row theme to have same text size as paragraphs (PR #10)
+- added exact version to navigation bar - if 'stable', the last released version will show, and 'latest' will reference the last commit [#16]
 
 version 0.0.2
 -------------
