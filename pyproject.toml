@@ -33,16 +33,3 @@ requires = [
     'wheel',
 ]
 build-backend = 'setuptools.build_meta'
-
-[tool.setuptools_scm]
-
-[tool.setuptools]
-zip-safe = false
-packages = ['stsci_rtd_theme']
-
-[tool.setuptools.package-data]
-'stsci_rtd_theme' = [
-    'theme.conf',
-    'static/*',
-    '*.html'
-]
