@@ -1,47 +1,63 @@
-# stsci_rtd_theme
-STScI branded sphinx theme that inherits from sphinx_rtd_theme
+# `stsci-rtd-theme`
 
-This theme is based off of the sphinx_rtd_theme, from which it inherits, but the CSS styling
-has been altered for easier reading on a variety of platforms and browsers.
+This is a Sphinx theme branded for the Space Telescope Sciences Institute (STScI).
+
+![Example](stsci_rtd_theme_example.png)
+
+This theme inherits from `sphinx-rtd-theme`; however, the CSS styling has been altered for easier reading on a variety
+of platforms and browsers.
 
 ## Installation
-You can apply this theme to your current documents by installing this repository like any other python package:
 
-Either from GIT:
+You can apply this theme to your current documents by installing like any other Python package:
+
+```shell
+pip install stsci-rtd-theme
 ```
-git clone https://github.com/spacetelescope/stsci_rtd_theme.git
-python setup.py install
-```
-Or with PIP:
-```
-# install directly from the git repository
+
+Alternatively, you may install the latest commit directly from GitHub:
+
+```shell
 pip install -e https://github.com/spacetelescope/stsci_rtd_theme.git
+```
 
-# install from pypi release
-pip install stsci_rtd_theme
+or clone the source code yourself:
+
+```shell
+git clone https://github.com/spacetelescope/stsci_rtd_theme.git
+cd stsci_rtd_theme
+pip install .
 ```
-## Adding to your Sphinx docs
+
+### Sphinx configuration
+
 If you haven't already created your Sphinx documentation, you can start sphinx with
-`sphinx-quickstart` and follow the guided steps. When you are finished,
-add these lines to your `conf.py` file:
-```
+`sphinx-quickstart` and follow the guided steps. When you are finished, add these lines to your `docs/conf.py` file:
+
+```python
 import stsci_rtd_theme
+
 html_theme = 'stsci_rtd_theme'
 html_theme_path = [stsci_rtd_theme.get_html_theme_path()]
 ```
-![Example theme render](stsci_rtd_theme_example.png)
 
-## Making this theme work on Readthedocs
-Add the following lines to your documentations conf.py file:
-```
+### ReadTheDocs configuration
+
+Add the following lines to your `docs/conf.py` file:
+
+```python
 import sphinx
-import stsci_rtd_theme
+import os
+from packaging.version import Version
+
 
 def setup(app):
     app.add_css_file("stsci.css")
 
-# the below is not strictly necessary but helps with extensions you may use across versions
-from packaging.version import Version
+
+extensions = [
+    ...
+]
 
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if on_rtd:
@@ -51,4 +67,16 @@ elif Version(sphinx.__version__) < Version('1.4'):
 else:
     extensions.append('sphinx.ext.imgmath')
 ```
-Finally, when setting up your documentation build on readthedocs, make sure to include a requirements file which installs this theme. The `sphinx_rtd_theme` that it inherits from should already be there.
+
+Finally, make sure to include `stsci-rtd-theme` to the `docs` extra, or alternatively add `stsci-rtd-theme` to
+a `rtd-requirements.txt` file. Then, in `.readthedocs.yml`, include the following (depending on which of the two methods
+are used to define the `stsci-rtd-theme` dependency):
+
+```yaml
+install:
+  - requirements: .rtd-requirements.txt
+  - method: pip
+    path: .
+    extra_requirements:
+      - docs
+```
