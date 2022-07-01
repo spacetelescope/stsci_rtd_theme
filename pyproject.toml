@@ -1,0 +1,48 @@
+[project]
+name = 'stsci-rtd-theme'
+description = 'STScI Branded Sphinx theme'
+readme = 'README.md'
+requires-python = '>=3.8'
+license = { file = 'LICENSE' }
+authors = [{ name = 'STScI', email = 'help@stsci.edu' }]
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'License :: OSI Approved :: BSD License',
+    'Programming Language :: Python :: 2.7',
+    'Programming Language :: Python :: 3',
+    'Operating System :: OS Independent',
+    'Topic :: Documentation',
+    'Topic :: Software Development :: Documentation',
+]
+dependencies = [
+    'sphinx>=1.3',
+    'sphinx-rtd-theme',
+]
+dynamic = ['version']
+
+[project.urls]
+'repository' = 'https://github.com/spacetelescope/stsci_rtd_theme'
+
+[project.entry-points]
+'sphinx.html_themes' = { stsci_rtd_theme = 'stsci_rtd_theme' }
+
+[build-system]
+requires = [
+    'setuptools >=61',
+    'setuptools_scm[toml] >=3.4',
+    'wheel',
+]
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools_scm]
+
+[tool.setuptools]
+zip-safe = false
+packages = ['stsci_rtd_theme']
+
+[tool.setuptools.package-data]
+'stsci_rtd_theme' = [
+    'theme.conf',
+    'static/*',
+    '*.html'
+]
