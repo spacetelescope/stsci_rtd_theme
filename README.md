@@ -1,6 +1,6 @@
 # `stsci-rtd-theme`
 
-This is a Sphinx theme branded for the Space Telescope Sciences Institute (STScI).
+This is a Sphinx theme for packages maintained by the Space Telescope Sciences Institute (STScI).
 
 ![Example](stsci_rtd_theme_example.png)
 
@@ -12,21 +12,15 @@ of platforms and browsers.
 You can apply this theme to your current documents by installing like any other Python package:
 
 ```shell
-pip install stsci-rtd-theme
+pip install https://github.com/spacetelescope/stsci_rtd_theme.git
 ```
 
-Alternatively, you may install the latest commit directly from GitHub:
-
-```shell
-pip install -e https://github.com/spacetelescope/stsci_rtd_theme.git
-```
-
-or clone the source code yourself:
+Alternatively, if you wish to install from source in editable mode, you may clone the repository locally:
 
 ```shell
 git clone https://github.com/spacetelescope/stsci_rtd_theme.git
 cd stsci_rtd_theme
-pip install .
+pip install -e .
 ```
 
 ### Sphinx configuration
@@ -35,6 +29,8 @@ If you haven't already created your Sphinx documentation, you can start sphinx w
 `sphinx-quickstart` and follow the guided steps. When you are finished, add these lines to your `docs/conf.py` file:
 
 ```python
+# docs/conf.py
+
 import stsci_rtd_theme
 
 html_theme = 'stsci_rtd_theme'
@@ -46,6 +42,8 @@ html_theme_path = [stsci_rtd_theme.get_html_theme_path()]
 Add the following lines to your `docs/conf.py` file:
 
 ```python
+# docs/conf.py
+
 import sphinx
 import os
 from packaging.version import Version
@@ -73,10 +71,18 @@ a `rtd-requirements.txt` file. Then, in `.readthedocs.yml`, include the followin
 are used to define the `stsci-rtd-theme` dependency):
 
 ```yaml
+# .readthedocs.yml
 install:
-  - requirements: .rtd-requirements.txt
   - method: pip
     path: .
     extra_requirements:
       - docs
+```
+
+```yaml
+# .readthedocs.yml
+install:
+  - requirements: .rtd-requirements.txt
+  - method: pip
+    path: .
 ```
