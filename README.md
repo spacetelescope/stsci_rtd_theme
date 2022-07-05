@@ -9,13 +9,19 @@ of platforms and browsers.
 
 ## Installation
 
-You can apply this theme to your current documents by installing like any other Python package:
+You can apply this theme to your current documents by installing the latest release from PyPI:
+
+```shell
+pip install stsci-rtd-theme
+```
+
+If you need the most up-to-date version of the `master` branch, you can install directly from GitHub:
 
 ```shell
 pip install https://github.com/spacetelescope/stsci_rtd_theme.git
 ```
 
-Alternatively, if you wish to install from source in editable mode, you may clone the repository locally:
+If you wish to modify the source code, you should clone the repository locally and install editable (`-e`):
 
 ```shell
 git clone https://github.com/spacetelescope/stsci_rtd_theme.git
