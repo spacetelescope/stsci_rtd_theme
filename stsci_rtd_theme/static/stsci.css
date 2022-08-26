@@ -378,6 +378,7 @@ small {
 .rst-content h4 .headerlink:before,
 .rst-content h5 .headerlink:before,
 .rst-content h6 .headerlink:before,
+.rst-content p .headerlink:before,
 .rst-content dl dt .headerlink:before,
 .rst-content p.caption .headerlink:before,
 .rst-content tt.download span:first-child:before,
@@ -465,7 +466,7 @@ textarea,
 .rst-content h5 .headerlink,
 .rst-content h6 .headerlink,
 .rst-content dl dt .headerlink,
-.rst-content p.caption .headerlink,
+.rst-content p .headerlink,
 .rst-content tt.download span:first-child,
 .rst-content code.download span:first-child,
 .icon {
@@ -552,7 +553,7 @@ textarea,
 .rst-content h5 .pull-left.headerlink,
 .rst-content h6 .pull-left.headerlink,
 .rst-content dl dt .pull-left.headerlink,
-.rst-content p.caption .pull-left.headerlink,
+.rst-content p .pull-left.headerlink,
 .rst-content tt.download span.pull-left:first-child,
 .rst-content code.download span.pull-left:first-child,
 .pull-left.icon {
@@ -571,7 +572,7 @@ textarea,
 .rst-content h5 .pull-right.headerlink,
 .rst-content h6 .pull-right.headerlink,
 .rst-content dl dt .pull-right.headerlink,
-.rst-content p.caption .pull-right.headerlink,
+.rst-content p .pull-right.headerlink,
 .rst-content tt.download span.pull-right:first-child,
 .rst-content code.download span.pull-right:first-child,
 .pull-right.icon {
@@ -2697,7 +2698,7 @@ textarea,
 .rst-content h5 .headerlink,
 .rst-content h6 .headerlink,
 .rst-content dl dt .headerlink,
-.rst-content p.caption .headerlink,
+.rst-content p .headerlink,
 .rst-content tt.download span:first-child,
 .rst-content code.download span:first-child,
 .icon,
@@ -2721,7 +2722,7 @@ textarea,
 .rst-content h5 .headerlink:before,
 .rst-content h6 .headerlink:before,
 .rst-content dl dt .headerlink:before,
-.rst-content p.caption .headerlink:before,
+.rst-content p .headerlink:before,
 .rst-content tt.download span:first-child:before,
 .rst-content code.download span:first-child:before,
 .icon:before,
@@ -2759,8 +2760,8 @@ a .rst-content h6 .headerlink,
 .rst-content h6 a .headerlink,
 a .rst-content dl dt .headerlink,
 .rst-content dl dt a .headerlink,
-a .rst-content p.caption .headerlink,
-.rst-content p.caption a .headerlink,
+a .rst-content p .headerlink,
+.rst-content p a .headerlink,
 a .rst-content tt.download span:first-child,
 .rst-content tt.download a span:first-child,
 a .rst-content code.download span:first-child,
@@ -2793,8 +2794,8 @@ a .icon {
 .rst-content h6 .btn .headerlink,
 .btn .rst-content dl dt .headerlink,
 .rst-content dl dt .btn .headerlink,
-.btn .rst-content p.caption .headerlink,
-.rst-content p.caption .btn .headerlink,
+.btn .rst-content p .headerlink,
+.rst-content p .btn .headerlink,
 .btn .rst-content tt.download span:first-child,
 .rst-content tt.download .btn span:first-child,
 .btn .rst-content code.download span:first-child,
@@ -2823,8 +2824,8 @@ a .icon {
 .rst-content h6 .nav .headerlink,
 .nav .rst-content dl dt .headerlink,
 .rst-content dl dt .nav .headerlink,
-.nav .rst-content p.caption .headerlink,
-.rst-content p.caption .nav .headerlink,
+.nav .rst-content p .headerlink,
+.rst-content p .nav .headerlink,
 .nav .rst-content tt.download span:first-child,
 .rst-content tt.download .nav span:first-child,
 .nav .rst-content code.download span:first-child,
@@ -2852,8 +2853,8 @@ a .icon {
 .rst-content h6 .btn .fa-large.headerlink,
 .btn .rst-content dl dt .fa-large.headerlink,
 .rst-content dl dt .btn .fa-large.headerlink,
-.btn .rst-content p.caption .fa-large.headerlink,
-.rst-content p.caption .btn .fa-large.headerlink,
+.btn .rst-content p .fa-large.headerlink,
+.rst-content p .btn .fa-large.headerlink,
 .btn .rst-content tt.download span.fa-large:first-child,
 .rst-content tt.download .btn span.fa-large:first-child,
 .btn .rst-content code.download span.fa-large:first-child,
@@ -2878,8 +2879,8 @@ a .icon {
 .rst-content h6 .nav .fa-large.headerlink,
 .nav .rst-content dl dt .fa-large.headerlink,
 .rst-content dl dt .nav .fa-large.headerlink,
-.nav .rst-content p.caption .fa-large.headerlink,
-.rst-content p.caption .nav .fa-large.headerlink,
+.nav .rst-content p .fa-large.headerlink,
+.rst-content p .nav .fa-large.headerlink,
 .nav .rst-content tt.download span.fa-large:first-child,
 .rst-content tt.download .nav span.fa-large:first-child,
 .nav .rst-content code.download span.fa-large:first-child,
@@ -2907,8 +2908,8 @@ a .icon {
 .rst-content h6 .btn .fa-spin.headerlink,
 .btn .rst-content dl dt .fa-spin.headerlink,
 .rst-content dl dt .btn .fa-spin.headerlink,
-.btn .rst-content p.caption .fa-spin.headerlink,
-.rst-content p.caption .btn .fa-spin.headerlink,
+.btn .rst-content p .fa-spin.headerlink,
+.rst-content p .btn .fa-spin.headerlink,
 .btn .rst-content tt.download span.fa-spin:first-child,
 .rst-content tt.download .btn span.fa-spin:first-child,
 .btn .rst-content code.download span.fa-spin:first-child,
@@ -2933,8 +2934,8 @@ a .icon {
 .rst-content h6 .nav .fa-spin.headerlink,
 .nav .rst-content dl dt .fa-spin.headerlink,
 .rst-content dl dt .nav .fa-spin.headerlink,
-.nav .rst-content p.caption .fa-spin.headerlink,
-.rst-content p.caption .nav .fa-spin.headerlink,
+.nav .rst-content p .fa-spin.headerlink,
+.rst-content p .nav .fa-spin.headerlink,
 .nav .rst-content tt.download span.fa-spin:first-child,
 .rst-content tt.download .nav span.fa-spin:first-child,
 .nav .rst-content code.download span.fa-spin:first-child,
@@ -2953,7 +2954,7 @@ a .icon {
 .rst-content h5 .btn.headerlink:before,
 .rst-content h6 .btn.headerlink:before,
 .rst-content dl dt .btn.headerlink:before,
-.rst-content p.caption .btn.headerlink:before,
+.rst-content p .btn.headerlink:before,
 .rst-content tt.download span.btn:first-child:before,
 .rst-content code.download span.btn:first-child:before,
 .btn.icon:before {
@@ -2973,7 +2974,7 @@ a .icon {
 .rst-content h5 .btn.headerlink:hover:before,
 .rst-content h6 .btn.headerlink:hover:before,
 .rst-content dl dt .btn.headerlink:hover:before,
-.rst-content p.caption .btn.headerlink:hover:before,
+.rst-content p .btn.headerlink:hover:before,
 .rst-content tt.download span.btn:first-child:hover:before,
 .rst-content code.download span.btn:first-child:hover:before,
 .btn.icon:hover:before {
@@ -2999,8 +3000,8 @@ a .icon {
 .rst-content h6 .btn-mini .headerlink:before,
 .btn-mini .rst-content dl dt .headerlink:before,
 .rst-content dl dt .btn-mini .headerlink:before,
-.btn-mini .rst-content p.caption .headerlink:before,
-.rst-content p.caption .btn-mini .headerlink:before,
+.btn-mini .rst-content p .headerlink:before,
+.rst-content p .btn-mini .headerlink:before,
 .btn-mini .rst-content tt.download span:first-child:before,
 .rst-content tt.download .btn-mini span:first-child:before,
 .btn-mini .rst-content code.download span:first-child:before,
@@ -4747,8 +4748,11 @@ code.code-large,
 }
 
 .wy-plain-list-disc,
+/* L6-7 in og sphinx */
+.rst-content .section .toctree-wrapper ul,
 .rst-content .section ul,
-.rst-content .toctree-wrapper ul,
+.rst-content section .toctree-wrapper ul,
+.rst-content section ul,
 article ul {
     list-style: disc;
     line-height: 24px;
@@ -4757,16 +4761,21 @@ article ul {
 }
 
 .wy-plain-list-disc li,
+/* L15 in og sphinx */
+.rst-content .section .toctree-wrapper ul li,
 .rst-content .section ul li,
-.rst-content .toctree-wrapper ul li,
+.rst-content section .toctree-wrapper ul li,
+.rst-content section ul li,
 article ul li {
     list-style: disc;
     margin-left: 24px
 }
 
 .wy-plain-list-disc li p:last-child,
+/* L23-24 in og sphinx; didn't add every change */
+.rst-content .section .toctree-wrapper ul li ul,
 .rst-content .section ul li p:last-child,
-.rst-content .toctree-wrapper ul li p:last-child,
+.rst-content section .toctree-wrapper ul li p:last-child,
 article ul li p:last-child {
     margin-bottom: 0
 }
@@ -4779,29 +4788,41 @@ article ul li ul {
 }
 
 .wy-plain-list-disc li li,
+/* L32 in og sphinx */
+.rst-content .section .toctree-wrapper ul li li,
 .rst-content .section ul li li,
-.rst-content .toctree-wrapper ul li li,
+.rst-content section .toctree-wrapper ul li li,
+.rst-content section ul li li,
 article ul li li {
     list-style: circle
 }
 
 .wy-plain-list-disc li li li,
+/* L38 in og sphinx */
+.rst-content .section .toctree-wrapper ul li li li,
 .rst-content .section ul li li li,
-.rst-content .toctree-wrapper ul li li li,
+.rst-content section .toctree-wrapper ul li li li,
+.rst-content section ul li li li,
 article ul li li li {
     list-style: square
 }
 
 .wy-plain-list-disc li ol li,
+/* L44 in og sphinx */
+.rst-content .section .toctree-wrapper ul li ol li,
 .rst-content .section ul li ol li,
-.rst-content .toctree-wrapper ul li ol li,
+.rst-content section .toctree-wrapper ul li ol li,
+.rst-content section ul li ol li,
 article ul li ol li {
     list-style: decimal
 }
 
 .wy-plain-list-decimal,
+/* L50 in og sphinx */
 .rst-content .section ol,
-.rst-content ol.arabic,
+.rst-content .section ol.arabic,
+.rst-content section ol,
+.rst-content section ol.arabic,
 article ol {
     list-style: decimal;
     line-height: 24px;
@@ -4810,16 +4831,21 @@ article ol {
 }
 
 .wy-plain-list-decimal li,
+/* L58 in og sphinx */
+.rst-content .section ol.arabic li,
 .rst-content .section ol li,
-.rst-content ol.arabic li,
+.rst-content section ol.arabic li,
+.rst-content section ol li,
 article ol li {
     list-style: decimal;
     margin-left: 24px
 }
 
 .wy-plain-list-decimal li p:last-child,
+/* L66-67 in og sphinx; didn't add every change */
+.rst-content .section ol.arabic li ul,
 .rst-content .section ol li p:last-child,
-.rst-content ol.arabic li p:last-child,
+.rst-content section ol li p:last-child,
 article ol li p:last-child {
     margin-bottom: 0
 }
@@ -4832,8 +4858,11 @@ article ol li ul {
 }
 
 .wy-plain-list-decimal li ul li,
+/* L75 in og sphinx */
+.rst-content .section ol.arabic li ul li,
 .rst-content .section ol li ul li,
-.rst-content ol.arabic li ul li,
+.rst-content section ol.arabic li ul li,
+.rst-content section ol li ul li,
 article ol li ul li {
     list-style: disc
 }
@@ -5887,8 +5916,8 @@ footer span.commit .rst-content tt,
 .rst-content h6 .rst-versions .rst-current-version .headerlink,
 .rst-versions .rst-current-version .rst-content dl dt .headerlink,
 .rst-content dl dt .rst-versions .rst-current-version .headerlink,
-.rst-versions .rst-current-version .rst-content p.caption .headerlink,
-.rst-content p.caption .rst-versions .rst-current-version .headerlink,
+.rst-versions .rst-current-version .rst-content p .headerlink,
+.rst-content p .rst-versions .rst-current-version .headerlink,
 .rst-versions .rst-current-version .rst-content tt.download span:first-child,
 .rst-content tt.download .rst-versions .rst-current-version span:first-child,
 .rst-versions .rst-current-version .rst-content code.download span:first-child,
