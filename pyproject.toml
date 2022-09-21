@@ -36,9 +36,6 @@ build-backend = 'setuptools.build_meta'
 
 [tool.setuptools_scm]
 
-[tool.setuptools]
-zip_safe = false
-
 [tool.setuptools.packages.find]
 
 [tool.setuptools.package-data]
