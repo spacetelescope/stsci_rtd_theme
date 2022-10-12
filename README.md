@@ -73,11 +73,11 @@ else:
 ```
 
 Finally, make sure to include `stsci-rtd-theme` to the `docs` extra, or alternatively add `stsci-rtd-theme` to
-a `rtd-requirements.txt` file. Then, in `.readthedocs.yml`, include the following (depending on which of the two methods
+a `rtd-requirements.txt` file. Then, in `.readthedocs.yaml`, include the following (depending on which of the two methods
 are used to define the `stsci-rtd-theme` dependency):
 
 ```yaml
-# .readthedocs.yml
+# .readthedocs.yaml
 install:
   - method: pip
     path: .
@@ -86,7 +86,7 @@ install:
 ```
 
 ```yaml
-# .readthedocs.yml
+# .readthedocs.yaml
 install:
   - requirements: .rtd-requirements.txt
   - method: pip
