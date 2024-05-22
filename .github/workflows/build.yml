@@ -1,22 +1,15 @@
 name: build
 
-on: [ push, pull_request ]
+on:
+  release:
+    types: [ released ]
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
-    name: build package
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ ubuntu-latest, macos-latest ]
-        python: [ 3.8, 3.9, '3.10' ]
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: ${{ matrix.python }}
-      - uses: actions/cache@v4
-        with:
-          path: ${{ env.pythonLocation }}
-          key: build-${{ runner.os }}-${{ env.pythonLocation }}-${{ hashFiles('**/pyproject.toml', '**/setup.*') }}
-      - run: pip wheel .
+    uses: OpenAstronomy/github-actions-workflows/.github/workflows/publish_pure_python.yml@v1
+    with:
+      upload_to_pypi: ${{ (github.event_name == 'release') && (github.event.action == 'released') }}
+    secrets:
+      pypi_token: ${{ secrets.PYPI_PASSWORD_STSCI_MAINTAINER }}
